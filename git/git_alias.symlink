@@ -1,0 +1,18 @@
+__check_and_set_git_config() {
+        [ $# -eq 2 ] && {
+                git config --global --get "$1" > /dev/null 2>&1 ;
+                [ $? -eq 0 ] || {
+                        git config --global "$1" "$2" ;
+                }
+        }
+}
+
+__check_and_set_git_config 'color.ui' auto ;
+
+__check_and_set_git_config 'alias.co' checkout ;
+__check_and_set_git_config 'alias.ci' commit ;
+__check_and_set_git_config 'alias.st' status ;
+
+__check_and_set_git_config 'alias.hist' 'log --graph --date-order -C -M --pretty=format:'%h %ad [%an] %Cgreen%d%Creset %s' --all --date=short' ;
+
+unset __check_and_set_git_config ;

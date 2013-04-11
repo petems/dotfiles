@@ -1,0 +1,27 @@
+[ "$PS1" ] && {
+
+	type __git_ps1 > /dev/null 2>&1 ; [ $? -eq 0 ] || {
+		__git_ps1() {
+			( [ -d .git ] && ( echo -n " [" ; git symbolic-ref HEAD | sed -e "s#^.*/##" | tr -d '\n' ; echo -n "]" ; ) ) || echo "" ;
+		}
+	}
+
+	__unq_git_ps1() {
+		case "`uname -s`" in
+			Darwin* ) [ "${PWD}" != "${HOME}" ] && [ "$(__gitdir)" != "${HOME}/.git" ] && __git_ps1 || true ;;
+			* ) __git_ps1 ;;
+		esac
+	}
+
+	export GIT_PS1_SHOWDIRTYSTATE=true
+	export GIT_PS1_SHOWSTASHSTATE=true
+	export GIT_PS1_SHOWUNTRACKEDFILES=true
+	export GIT_PS1_SHOWUPSTREAM=auto
+
+	__exit_status() {
+		[ $? -eq 0 ] || { echo -n " ! " ; }
+	}
+
+	PS1="\[\e[0;31m\]\$(__exit_status)\[\e[0;36m\]\u@\h \[\e[0;35m\]\w\[\e[0;33m\]\$(__unq_git_ps1)\[\e[0;0m\] $ " ;
+}
+

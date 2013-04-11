@@ -1,0 +1,6 @@
+[ $(uname -s) = 'Darwin' ] && {
+        _source_if_exists "`brew --prefix`/Cellar/coreutils/8.12/aliases" ;
+        _source_if_exists "`brew --prefix`/etc/bash_completion.d/cdargs-bash.sh" ;
+        _source_if_exists "`brew --prefix`/etc/bash_completion.d/git-prompt.sh" ;
+        _source_if_exists "`brew --prefix`/etc/bash_completion.d/git-completion.bash" ;
+}

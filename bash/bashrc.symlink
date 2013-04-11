@@ -1,0 +1,30 @@
+_source_if_exists() {
+        local file ;
+        for file ; do
+                [ -f "${file}" ] && source "${file}" ;
+        done
+}
+
+        # A place to keep random bits and bobs before sourcing...
+        _source_if_exists "${HOME}/.before_bash" ;
+
+        # Boxen sourcing
+        _source_if_exists "/opt/boxen/env.sh" ;
+
+        # load all relevant bash completion scripts
+        _source_if_exists "${HOME}/.completion" ;
+
+        # set the PS1 prompt for interactive shells
+        _source_if_exists "${HOME}/.prompting" ;
+
+        # git-specific aliases and settings
+        _source_if_exists "${HOME}/.git_aliases" ;
+
+        # A place to keep random bits and bobs after sourcing...
+        _source_if_exists "${HOME}/.after_bash" ;
+
+        # TODO: do some fancy colours here...
+        echo 'PETEMS Dotfiles WIP 2013'
+        bash --version
+
+unset _source_if_exists ;
