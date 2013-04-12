@@ -23,8 +23,16 @@ _source_if_exists() {
         # A place to keep random bits and bobs after sourcing...
         _source_if_exists "${HOME}/.after_bash" ;
 
+        # Terminal aliases
+        _source_if_exists "${HOME}/.terminal" ;
+
         # TODO: do some fancy colours here...
-        echo 'PETEMS Dotfiles WIP 2013'
+        echo ' _____     _       __  __  _____
+|  __ \   | |     |  \/  |/ ____|
+| |__) |__| |_ ___| \  / | (___
+|  ___/ _ \ __/ _ \ |\/| |\___ \
+| |  |  __/ ||  __/ |  | |____) |
+|_|   \___|\__\___|_|  |_|_____/ '
         bash --version
 
 unset _source_if_exists ;
