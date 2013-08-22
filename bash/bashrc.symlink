@@ -26,8 +26,8 @@ _source_if_exists() {
         # Terminal aliases
         _source_if_exists "${HOME}/.terminal" ;
         
-        # Vagrant bash completetion
-        _source_if_exists "`brew --prefix`/etc/bash_completion.d/vagrant";
+        # Standard bash completion
+        _source_if_exists "$(brew --prefix)/etc/bash_completion"
 
         # TODO: do some fancy colours here...
         echo ' _____     _       __  __  _____
