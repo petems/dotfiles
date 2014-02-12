@@ -26,21 +26,11 @@ _source_if_exists() {
         # Terminal aliases
         _source_if_exists "${HOME}/.terminal" ;
         
+        # Standard bash completion
         [ $(uname -s) = 'Darwin' ] && {
         _source_if_exists "$(brew --prefix)/etc/bash_completion"
         }
 
-
-        # Standard bash completion
-        
-
-        # TODO: do some fancy colours here...
-        echo ' _____     _       __  __  _____
-|  __ \   | |     |  \/  |/ ____|
-| |__) |__| |_ ___| \  / | (___
-|  ___/ _ \ __/ _ \ |\/| |\___ \
-| |  |  __/ ||  __/ |  | |____) |
-|_|   \___|\__\___|_|  |_|_____/ '
         bash --version
 
 unset _source_if_exists ;
