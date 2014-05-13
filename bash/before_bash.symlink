@@ -1,0 +1,16 @@
+export DO_CLIENT_ID=
+export DO_API_KEY=
+export DEV_AWS_ACCESS_KEY_ID=
+export DEV_AWS_SECRET_ACCESS_KEY=
+
+export OS_AUTH_URL=https://lon.identity.api.rackspacecloud.com/v2.0/
+export OS_USERNAME=
+export OS_AUTH_SYSTEM=rackspace_uk
+export OS_REGION_NAME=LON
+export OS_SERVICE_NAME=cloudserversOpenStack
+export OS_PASSWORD=
+export OS_TENANT_NAME=
+export OS_TENANT_ID=
+export OS_NO_CACHE=1
+
+export GITHUB_API_TOKEN=
