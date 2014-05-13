@@ -1,0 +1,1 @@
+# growl() { echo -e $'\e]9;'${*}'\007' ; return ; }
