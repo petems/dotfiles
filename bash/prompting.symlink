@@ -21,7 +21,9 @@
 	__exit_status() {
 		[ $? -eq 0 ] || { echo -n " ! " ; }
 	}
-
+	
+	export PROMPT_COMMAND="echo -n \[\$(date +%H:%M:%S)\]"
+	
 	PS1="\[\e[0;31m\]\$(__exit_status)\[\e[0;36m\]\u@\h \[\e[0;35m\]\w\[\e[0;33m\]\$(__unq_git_ps1)\[\e[0;0m\] $ " ;
 }
 
