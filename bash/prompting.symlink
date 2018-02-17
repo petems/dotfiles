@@ -8,7 +8,6 @@
 
 	__unq_git_ps1() {
 		case "`uname -s`" in
-			Darwin* ) [ "${PWD}" != "${HOME}" ] && [ "$(__gitdir)" != "${HOME}/.git" ] && __git_ps1 || true ;;
 			* ) __git_ps1 ;;
 		esac
 	}
