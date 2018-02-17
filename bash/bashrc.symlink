@@ -33,4 +33,8 @@ _source_if_exists() {
 
         bash --version
 
+eval "$(rbenv init -)"
+
+alias git=hub
+
 unset _source_if_exists ;
