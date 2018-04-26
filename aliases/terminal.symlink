@@ -5,10 +5,6 @@ cdf() {  # short for cdfinder
   cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
 }
 
-keybaseDecrypt() {
-  "pbpaste | base64 --decode | keybase pgp decrypt"
-}
+alias keybaseDecrypt='pbpaste | base64 --decode | keybase pgp decrypt'
 
-gpgDecrypt() {
-  "pbpaste | base64 -D | gpg --decrypt"
-}
+alias gpgDecrypt='pbpaste | base64 -D | gpg --decrypt'
