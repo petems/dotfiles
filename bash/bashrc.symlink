@@ -40,4 +40,6 @@ eval "$(rbenv init -)"
 
 alias git=hub
 
+PATH=$PATH:/usr/local/sbin
+
 unset _source_if_exists ;
