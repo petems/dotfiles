@@ -14,3 +14,4 @@ export OS_TENANT_ID=
 export OS_NO_CACHE=1
 
 export GITHUB_API_TOKEN=
+export CHANGELOG_GITHUB_TOKEN=
