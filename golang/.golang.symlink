@@ -1,4 +1,4 @@
-export GOPATH=$HOME/golang
+export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
