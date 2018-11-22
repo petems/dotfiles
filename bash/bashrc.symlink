@@ -1,3 +1,5 @@
+alias vagrant=/usr/local/bin/vagrant
+
 _source_if_exists() {
         local file ;
         for file ; do

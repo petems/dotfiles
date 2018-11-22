@@ -15,3 +15,5 @@ export OS_NO_CACHE=1
 
 export GITHUB_API_TOKEN=
 export CHANGELOG_GITHUB_TOKEN=
+
+export VAGRANT_DEFAULT_PROVIDER=virtualbox
