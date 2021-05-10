@@ -5,7 +5,8 @@
         protocol = https
 [user]
         name = petems
-        email = p.morsou@gmail.com
+        email = petems@users.noreply.github.com
+        signingkey = <CHANGE ME>
 [credential]
         helper = osxkeychain
 [alias]
@@ -23,7 +24,7 @@
 [core]
         excludesfile = ~/.gitignore
         editor = vim
-        pager = diff-so-fancy | less --tabs=4 -RFX
+        pager = delta
 [apply]
         whitespace = nowarn
 [mergetool]
@@ -52,3 +53,5 @@
         old = red bold
         new = green bold
         whitespace = red reverse
+[commit]
+        gpgsign = true
