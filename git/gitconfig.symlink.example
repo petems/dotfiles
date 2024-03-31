@@ -6,9 +6,9 @@
 [user]
         name = petems
         email = petems@users.noreply.github.com
-        signingkey = <CHANGE ME>
+        # signingkey = <CHANGE ME>
 [credential]
-        helper = osxkeychain
+        helper = /usr/local/share/gcm-core/git-credential-manager
 [alias]
         co = checkout
         st = status
@@ -54,4 +54,4 @@
         new = green bold
         whitespace = red reverse
 [commit]
-        gpgsign = true
+        # gpgsign = true
