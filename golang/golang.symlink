@@ -1,5 +1,8 @@
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
-export GOROOT=/usr/local/opt/go/libexec
+# Homebrew
+export GOROOT="$(brew --prefix golang)/libexec"
+# Manual install
+# export GOROOT=/usr/local/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
