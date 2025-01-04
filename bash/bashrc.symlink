@@ -43,11 +43,11 @@ _source_if_exists() {
 
         bash --version
 
-[ $(uname -s) = 'Darwin' ] && {
-  eval "$(rbenv init -)"
-} else {
+[ $(uname -s) != 'Darwin' ] && {
   export PATH="$HOME/.rbenv/bin:$PATH"
 }
+
+eval "$(rbenv init -)"
 
 alias git=hub
 
