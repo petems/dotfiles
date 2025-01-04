@@ -33,11 +33,13 @@ _source_if_exists() {
 
         # Standard bash completion
         [ $(uname -s) = 'Darwin' ] && {
-        _source_if_exists "$(brew --prefix)/etc/bash_completion"
+                _source_if_exists "$(brew --prefix)/etc/bash_completion"
         }
 
-        # adds brew setup
-        eval "$(/opt/homebrew/bin/brew shellenv)"
+        [ $(uname -s) = 'Darwin' ] && {
+           # adds brew setup
+           eval "$(/opt/homebrew/bin/brew shellenv)"
+        }
 
         bash --version
 
